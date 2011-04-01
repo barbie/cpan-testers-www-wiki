@@ -13,6 +13,7 @@ requires:
   Labyrinth:                        5.04
   Labyrinth::Plugin::Core:          5.06
   Labyrinth::Plugin::Wiki:          1.00
+  Labyrinth::DIUtils::ImageMagick:  5.04
 recommends:
   Test::CPAN::Meta:                 0.13
   Test::CPAN::Meta::JSON:           0.10
