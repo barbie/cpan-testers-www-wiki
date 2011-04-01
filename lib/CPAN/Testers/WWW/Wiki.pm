@@ -29,7 +29,7 @@ server's virtual host directory.
 Included in the distribution is a C<vhost.conf> file, which contains the 
 virtual host settings to implement the site using the Apache Web Server.
 
-=head1 ADDITION COPYRIGHT
+=head1 ADDITIONAL COPYRIGHT
 
 This distribution includes TonyMCE [1], a Javascript WYSIWYG Editor used within
 the site. TinyMCE is distributed under the GNU Lesser General Public License 

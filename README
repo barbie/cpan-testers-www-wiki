@@ -21,7 +21,7 @@ VHOST FILES
        virtual host settings to implement the site using the Apache Web
        Server.
 
-ADDITION COPYRIGHT
+ADDITIONAL COPYRIGHT
        This distribution includes TonyMCE [1], a Javascript WYSIWYG Editor
        used within the site. TinyMCE is distributed under the GNU Lesser
        General Public License Version 2.1, and all files within the

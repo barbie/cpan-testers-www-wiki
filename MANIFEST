@@ -347,3 +347,4 @@ vhost/html/js/tiny_mce/utils/validate.js
 vhost/html/js/wiki.js
 vhost/toolkit/rssfeeds.pl
 vhost/toolkit/rssfeeds.sh
+vhost/vhosts.conf
