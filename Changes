@@ -1,0 +1,106 @@
+Changes for the CPAN Testers Wiki website
+
+1.00    01/04/2011
+        - upgrade to Labyrinth 5.04.
+        - upgrade to Labyrinth-Plugin-Core 5.06.
+        - upgrade to Labyrinth-Plugin-Wiki 1.00.
+        - package for CPAN release.
+
+0.19    01/12/2010
+        - activated SetHits
+
+0.18    29/09/2010
+        - repositioned site boxes to avoid text and logo clashing.
+
+0.17    17/09/2010
+        - upgrade to Labyrinth v5.00 (CORE only)
+        - added links to Metabase and Labyrinth.
+
+0.16    13/03/2010
+        - upgrade to Labyrinth v4.17 (CORE only)
+        - fixed user admin for ban/hide/show/delete actions.
+        - fixed rollback on history.
+
+0.15    14/01/2010
+        - added Analysis to site family lists.
+
+0.14    12/06/2009
+        - fixed user registration, thanks to Tony Cook for spotting.
+
+0.13    17/05/2009
+        - fix to uninitialised $html variable in MLUtils.pm.
+        - fixed search box input field in parserules.ini
+        - upgrade to Labyrinth v4.16
+        - incorporated new layout design
+
+0.12    15/10/2008
+        - cleanup of parserules.ini entries.
+        - cleanup of XHTML entities.
+        - underlying path and DB changes from cpantest => cpanwiki.
+        - switched to storing passwords using SHA1 encryption.
+
+0.11    07/10/2008
+        - update copyright dates.
+        - fixed an number of RSS generation issues.
+        - added validation for RSS configuration settings.
+        - added rssfeeds.pl to generate RSS 2.0 and Atom 1.0 feeds for
+          the last 10 Recent Changes.
+        - fixed CSS settings for wikitext edit box.
+
+0.10    06/10/2008
+        - fix to avoid uninitialised variable errors (Wiki.pm)
+        - upgrade to Labyrinth v4.15
+        - overhauled TinyMCE features allowed.
+        - fixed CSS for top quote and header boxes.
+        - fix get session to find guest userid if using default login.
+        - update sessions table.
+        - XHTML fixes.
+        - fixed MLUtils.pm to account for XHTML compliance.
+
+0.09    28/12/2007
+        - user list and adminlist fixes (thanks to Andreas König)
+        - whitespace clean up in code
+        - Change comment now starts blank
+        - reset_request not clearing remaining actions
+        - missing template for badmail
+
+0.08    03/12/2007
+        - upgrade to Labyrinth v4.12
+        - fixed user-edit functionality (thanks to Slaven)
+        - fixed wiki-page links to just use /wiki/ instead (short URLs)
+        - added ability to go back to the last page you were on when logging
+          in. (thanks to David Golden for requesting this)
+
+0.07    28/08/2007
+        - further minor cleanups in the user templates
+        - added basic and all version searching (was missing! oops!)
+        - fixed user-login success
+        - fixed utf8 bug in clean_attr_text (MLUtils.pm)
+
+0.06    02/07/2007
+        - cleaned user side of public and admin templates
+        - fixed password obscurity in registration
+
+0.05    22/06/2007
+        - diff error message handling
+        - reduce header height from 150px to 100px
+
+0.04    03/06/2007
+        - fix MLUtils.pm bug
+        - got diff working
+        - got recent changes entries dropdown working
+
+0.03    24/05/2007
+        - login fix
+        - email constraint should be 'emails'
+
+0.02    22/05/2007
+        - fix to regex matching
+        - <pre> to the list not requiring an empty <p> before it.
+        - if a page is not in the index, add it correctly
+        - improvements to the regex patterns
+        - added the !!code!! for inline code text
+        - added cpan/perldoc/user/image/media to wikilinks
+
+0.01    09/05/2007
+        - First released version, based on Labyrinth v4.06
