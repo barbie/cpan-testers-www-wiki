@@ -12,8 +12,17 @@
     <meta name="Generator"          content="Labyrinth" />
     <meta name="keywords"           content="perl,cpan,testing,testers" />
     <meta name="description"        content="CPAN Testers Wiki for information about automated testing of CPAN Perl distributions" />
-    <meta name="copyright"          content="Copyright (C) 2007,2008 CPAN Testers" />
+    <meta name="copyright"          content="Copyright (C) 2007-2011 CPAN Testers" />
 
+[% IF redirect %]
+
+    <meta http-equiv="refresh" content="0;url=[% redirect %]"> 
+
+</head>
+<body>
+<p>saving...</p>
+
+[% ELSE %]
     <link rel="alternate"  type="application/atom+xml" title="Atom"    href="http://wiki.cpantesters.org/rss/atom-1.0.xml" />
     <link rel="alternate"  type="application/rss+xml"  title="RSS 2.0" href="http://wiki.cpantesters.org/rss/rss-2.0.xml" />
 
@@ -116,6 +125,8 @@
     [% INCLUDE "public/footer.html" %]
 
   </div> 
+
+[% END %]
 
 </body>
 </html>

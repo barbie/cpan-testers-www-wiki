@@ -64,6 +64,7 @@ vhost/cgi-bin/templates/wiki/wiki_edit.html
 vhost/cgi-bin/templates/wiki/wiki_hist.html
 vhost/cgi-bin/templates/wiki/wiki_page.html
 vhost/cgi-bin/templates/wiki/wiki_recent.html
+vhost/cgi-bin/templates/wiki/wiki_saved.html
 vhost/cgi-bin/templates/wiki/wiki_search.html
 vhost/dumper.sh
 vhost/html/css/layout2_setup.css

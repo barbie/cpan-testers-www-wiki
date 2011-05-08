@@ -23,10 +23,10 @@
         <li><a href="/wiki/[% wikihash.pagename %]">Show</a></li>
       [% END %]           
       [% IF !wikihash.editmode %]
-        <li><a href="[% cgipath %]/pages.cgi?act=wiki-edit&amp;pagename=[% wikihash.pagename %]" rel="nofollow">Edit</a></li>
+        <li><a href="/wiki/edit/[% wikihash.pagename %]" rel="nofollow">Edit</a></li>
       [% END %]           
       [% IF !wikihash.histmode %]
-        <li><a href="[% cgipath %]/pages.cgi?act=wiki-hist&amp;pagename=[% wikihash.pagename %]" rel="nofollow">History</a></li>
+        <li><a href="/wiki/hist/[% wikihash.pagename %]" rel="nofollow">History</a></li>
       [% END %]
     [% END %]
   [% END %]
@@ -34,14 +34,14 @@
 
 <h2>Users</h2>
 <ul>
-  <li><a href="[% cgipath %]/pages.cgi?act=user-list" rel="nofollow">People</a></li>
+  <li><a href="/user/list" rel="nofollow">People</a></li>
 
   [% IF loggedin %]
-    <li><a href="[% cgipath %]/pages.cgi?act=user-edit">Edit Profile</a></li>
-    <li><a href="[% cgipath %]/pages.cgi?act=user-logout" rel="nofollow">Logout</a></li>
+    <li><a href="/user/edit">Edit Profile</a></li>
+    <li><a href="/user/logout" rel="nofollow">Logout</a></li>
 
   [% ELSE %]
-    <li><a href="[% cgipath %]/pages.cgi?act=user-login&amp;lastpage=act~wiki-page+pagename~[% wikihash.pagename %]" rel="nofollow">Login</a></li>
+    <li><a href="/user/login?lastpage=act~wiki-page+pagename~[% wikihash.pagename %]" rel="nofollow">Login</a></li>
   [% END %]
 </ul>
 
@@ -55,11 +55,11 @@
 <h2>Admin</h2>
 <ul>
   [% IF wikihash.locked %]
-    <li><a href="[% cgipath %]/pages.cgi?act=wiki-unlock&amp;pagename=[% wikihash.pagename %]">Unlock Page</a></li>
+    <li><a href="/wiki/unlock/[% wikihash.pagename %]">Unlock Page</a></li>
   [% ELSE %]
-    <li><a href="[% cgipath %]/pages.cgi?act=wiki-lock&amp;pagename=[% wikihash.pagename %]">Lock Page</a></li>
+    <li><a href="/wiki/lock/[% wikihash.pagename %]">Lock Page</a></li>
   [% END %]
-  <li><a href="[% cgipath %]/pages.cgi?act=wiki-delete&amp;pagename=[% wikihash.pagename %]">Delete Page</a></li>
+  <li><a href="/wiki/delete/[% wikihash.pagename %]">Delete Page</a></li>
 </ul>
 [% END %]
 [% END %]

@@ -1,5 +1,13 @@
 Changes for the CPAN Testers Wiki website
 
+1.01    08/05/2011
+	- typo fixes
+	- added vhosts.conf
+	- URL pattern match fixes.
+	- now redirect on save.
+	- changed menu links to use masked links.
+        - upgrade to Labyrinth-Plugin-Wiki 1.01.
+
 1.00    01/04/2011
         - upgrade to Labyrinth 5.04.
         - upgrade to Labyrinth-Plugin-Core 5.06.

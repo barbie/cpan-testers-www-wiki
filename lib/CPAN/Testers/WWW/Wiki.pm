@@ -3,7 +3,7 @@ package CPAN::Testers::WWW::Wiki;
 use warnings;
 use strict;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 1;
 
@@ -31,7 +31,7 @@ virtual host settings to implement the site using the Apache Web Server.
 
 =head1 ADDITIONAL COPYRIGHT
 
-This distribution includes TonyMCE [1], a Javascript WYSIWYG Editor used within
+This distribution includes TinyMCE [1], a Javascript WYSIWYG Editor used within
 the site. TinyMCE is distributed under the GNU Lesser General Public License 
 Version 2.1, and all files within the './vhost/html/js/tiny_mce' directory
 are copyright of the TinyMCE project.
