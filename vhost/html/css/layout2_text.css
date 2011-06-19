@@ -123,6 +123,9 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .main a:hover img {border:solid 1px rgb(220,220,220);}
 
 
+.footnote   { text-align: center; }
+.footnote a { color:rgb(70,122,167); font-weight:bold; text-decoration:none; font-size: 0.7em; }
+
 
 .ud { border: 1px dashed #f00; padding: 5px; margin-bottom: 1em}
 .ud p { color: #f00; }
@@ -197,11 +200,12 @@ a.tooltip:hover span {
 	color: #fff;
 } 
 
-.users { margin: 5px 0px; border: 1px dashed #999; padding: 4px; }
-.userbits { clear:both; margin: 0px; }
-.username { font-weight:bold; font-size: 110%; }
-.userinfo { clear:both; margin-left: 20px; width: 610px; }
-.userinfo img { margin-left: 5px; margin-bottom: 5px; }
+.users        { margin: 5px 0px; border: 1px dashed #999; padding: 4px; }
+.userbits     { margin: 0px; }
+.username     { font-weight: bold; font-size: 110%; }
+.userinfo     { margin-left: 20px; width: 100%; }
+.userinfo p   { margin-bottom: 2px; }
+.userpic img  { float: right; margin: 0 0 5px 5px; }
 
 .main-navigation form { margin-left: 20px; }
 

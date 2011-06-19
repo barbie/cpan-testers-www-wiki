@@ -6,8 +6,8 @@
     crumb1_name = 'Edit' ;
 %]
 
-<script language="javascript" type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
 tinyMCE.init({
     mode : "textareas",
     theme : "advanced",
@@ -29,13 +29,12 @@ tinyMCE.init({
 
 [% IF users.data %]
 <div class="box">
-[% IF thanks %]<p>[% thanks %][% END %]
-<p>Fields marked * are mandatory fields and must be completed.
-<p>
-<b>Please take the time to enter your details, as it helps others to identify you when you make any
-changes to the pages on the site. Note that only the details shown in the preview at the bottom of
-the page, will be visible on the wiki.
-</b></div>
+[% IF thanks %]<p>[% thanks %]</p>[% END %]
+<p>Fields marked * are mandatory fields and must be completed.</p>
+<p><strong>Please take the time to enter your details, as it helps others to 
+identify you when you make any changes to the pages on the site. Note that 
+only the details shown in the preview at the bottom of the page, will be 
+visible on the wiki.</strong></p></div>
 
 <form method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="user-pass" />
@@ -45,7 +44,7 @@ the page, will be visible on the wiki.
 
 [% IF errmess %]
 <div class="box">
-<p class="alert">There are invalid or missing fields, as noted by the &empty; symbol.
+<p class="alert">There are invalid or missing fields, as noted by the &empty; symbol.</p>
 </div>
 [% END %]
 
@@ -74,33 +73,53 @@ the page, will be visible on the wiki.
         <td class="alert">[% users.data.url_err %]</td>
         <td><input type="text" name="url" value="[% users.data.url %]" size="50" /></td>
     </tr>
+<!--
     <tr><td>Avatar</td>
         <td class="alert">[% users.data.image_err %]</td>
         <td><input type="file" name="image" /><br/>
             <img src="[% webpath %]/[% users.data.link %]" alt="[% users.data.name %]"/></td>
     </tr>
+-->
     </table>
 </div>
 
-<p><input type="submit" name="submit" value="UPDATE" />
+<p><input type="submit" name="submit" value="UPDATE" /></p>
 </form>
 
 <h2>Preview</h2>
 
 <div class="users">
+  <div class="userpic">
+    [% IF users.preview.gravatar %]
+      <img src="[% users.preview.gravatar %]" alt="[% users.preview.realname %]" width="80" height="80" />
+    [% END %]
+
+    <!--
+    [% IF users.preview.link %]
+      <img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" 
+      [% IF users.preview.width  %]width="[% users.preview.width %]"[% END %]
+      [% IF users.preview.height %]height="[% users.preview.height %]"[% END %]
+      />
+    [% END %]
+    -->
+  </div>
+
   <div class="userbits">
+    [% IF user.access == 5 %]
+    <div class="username"><a href="[% cgipath %]/pages.cgi?act=user-adminedit&amp;userid=[% users.preview.userid %]">[% users.preview.realname %]</a></div>
+    [% ELSE %]
     <div class="username">[% users.preview.realname %]</div>
+    [% END %]
   </div>
   <div class="userinfo">
-    [% IF users.preview.link %]<img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" />[% END %]
     [% IF users.preview.aboutme ; users.preview.aboutme ; END %]
-    [% IF users.preview.url %]<p><b>My Web Page:</b> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
+    [% IF users.preview.url %]<p><strong>My Web Page:</strong> <a href="[% users.preview.url %]">[% users.preview.url %]</a></p>[% END %]
     [% IF ! users.preview.aboutme AND ! users.preview.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>
 
 [% ELSE %]
 
-<div class="box"><p>User not found.</div>
+<div class="box"><p>User not found.</p></div>
 
 [% END %]

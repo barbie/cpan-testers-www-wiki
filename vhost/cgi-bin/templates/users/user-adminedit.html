@@ -6,8 +6,8 @@
     crumb1_name = 'Edit' ;
 %]
 
-<script language="javascript" type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
+<script  type="text/javascript">
 tinyMCE.init({
     mode : "textareas",
     theme : "advanced",
@@ -25,19 +25,17 @@ tinyMCE.init({
 });
 </script>
 
-
-
-[% IF thanks %]<p>User saved successfully.[% END %]
-<p>Fields marked '*' are mandatory fields and must be completed.
+[% IF thanks %]<p>User saved successfully.</p>[% END %]
+<p>Fields marked '*' are mandatory fields and must be completed.</p>
 
 <form method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="user-pass" />
 <input type="hidden" name="userid" value="[% users.data.userid %]" />
-<p align="center"><input type="submit" name="submit" value="CHANGE PASSWORD" />
+<p align="center"><input type="submit" name="submit" value="CHANGE PASSWORD" /></p>
 </form>
 
 [% IF errmess %]
-<p class="alert">There are invalid or missing fields, as noted by the &empty; symbol.
+<p class="alert">There are invalid or missing fields, as noted by the &empty; symbol.</p>
 [% END %]
 
 <form method="post" action="[% cgipath %]/pages.cgi" enctype="multipart/form-data">
@@ -73,6 +71,7 @@ tinyMCE.init({
         <td class="alert">[% users.data.url_err %]</td>
         <td><input type="text" name="url" value="[% users.data.url %]" size="50" /></td>
     </tr>
+<!--
     <tr><td>Avatar</td>
         <td class="alert">[% users.data.image_err %]</td>
         <td><input type="file" name="image" />
@@ -81,6 +80,7 @@ tinyMCE.init({
 [% END %]
         <input type="hidden" name="imageid" value="[% users.data.imageid %]" /></td>
     </tr>
+-->
     <tr><td>Realm</td>
         <td class="alert">[% users.data.realm_err %]</td>
         <td>[% users.data.ddrealms %]</td>
@@ -91,23 +91,40 @@ tinyMCE.init({
 [% IF newuser %][% ELSE %]
 <p align="center">
 [ <a href="[% cgipath %]/pages.cgi?act=user-pass&amp;userid=[% users.data.userid %]">change password</a>
-| <a href="[% cgipath %]/pages.cgi?act=user-acl&amp;userid=[% users.data.userid %]">change access rights</a> ]
+| <a href="[% cgipath %]/pages.cgi?act=user-acl&amp;userid=[% users.data.userid %]">change access rights</a> ]</p>
 [% END %]
 
-<p align="center"><input type="submit" name="submit" value="UPDATE" />
+<p align="center"><input type="submit" name="submit" value="UPDATE" /></p>
 </form>
 
 <h2>Preview</h2>
 
 <div class="users">
+  <div class="userpic">
+    [% IF users.preview.gravatar %]
+      <img src="[% users.preview.gravatar %]" alt="[% users.preview.realname %]" width="80" height="80" />
+    [% END %]
+
+    <!--
+    [% IF users.preview.link %]
+      <img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" 
+      [% IF users.preview.width  %]width="[% users.preview.width %]"[% END %]
+      [% IF users.preview.height %]height="[% users.preview.height %]"[% END %]
+      />
+    [% END %]
+    -->
+  </div>
+
   <div class="userbits">
+    [% IF user.access == 5 %]
+    <div class="username"><a href="[% cgipath %]/pages.cgi?act=user-adminedit&amp;userid=[% users.preview.userid %]">[% users.preview.realname %]</a></div>
+    [% ELSE %]
     <div class="username">[% users.preview.realname %]</div>
+    [% END %]
   </div>
   <div class="userinfo">
-    [% IF users.preview.link %]<img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" />[% END %]
     [% IF users.preview.aboutme ; users.preview.aboutme ; END %]
-    [% IF users.preview.url %]<p><b>My Web Page:</b> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
+    [% IF users.preview.url %]<p><strong>My Web Page:</strong> <a href="[% users.preview.url %]">[% users.preview.url %]</a></p>[% END %]
     [% IF ! users.preview.aboutme AND ! users.preview.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>
-

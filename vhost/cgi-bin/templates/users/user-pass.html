@@ -4,14 +4,14 @@
     crumb1_name = 'Change Password' ;
 %]
 
-[% IF errmess %]<div class="box"><p style="alert">[% errmess %]</P></div>[% END %]
+[% IF errmess %]<div class="box"><p style="alert">[% errmess %]</p></div>[% END %]
 <div class="box">
-    <p>Please use the following rules to create your new password:
+    <p>Please use the following rules to create your new password:</p>
     <ul>
-    <li>Passwords should be [% minpasslen %] - [% maxpasslen %] characters in length.
-    <li>Use more than one type from the upper case, lower case, numeral and symbol character types, e.g. 'Myword', 'smallword2' and 'L!TTLE' would all be fine.
-    <li>Use at least 3 unique characters, i.e 'Eeeeee' is not allowed.
-    <li>No whitespace characters allowed.
+    <li>Passwords should be [% minpasslen %] - [% maxpasslen %] characters in length.</li>
+    <li>Use more than one type from the upper case, lower case, numeral and symbol character types, e.g. 'Myword', 'smallword2' and 'L!TTLE' would all be fine.</li>
+    <li>Use at least 3 unique characters, i.e 'Eeeeee' is not allowed.</li>
+    <li>No whitespace characters allowed.</li>
     </ul>
 </div>
 
@@ -23,7 +23,7 @@
         <table width="100%">
         <tr><td>User</td>
             <td></td>
-            <td><b>[% user.name %]</b></td>
+            <td><strong>[% user.name %]</strong></td>
         </tr>
         <tr><td width="150">Your Current Password</td>
             <td width="10"></td>
@@ -48,6 +48,6 @@
         </table>
 </div>
 
-<p align="center"><input type="submit" name="submit" value="UPDATE" />
+<p align="center"><input type="submit" name="submit" value="UPDATE" /></p>
 </form>
 

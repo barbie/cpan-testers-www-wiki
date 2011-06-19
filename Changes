@@ -1,5 +1,13 @@
 Changes for the CPAN Testers Wiki website
 
+1.02    19/06/2011
+	- added Terms & Conditions page/link.
+	- switch to using a Gravatar for user profiles.
+	- some XHTML template fixes.
+        - upgrade to Labyrinth 5.07.
+        - upgrade to Labyrinth-Plugin-Core 5.07.
+        - upgrade to Labyrinth-Plugin-Wiki 1.02.
+
 1.01    08/05/2011
 	- typo fixes
 	- added vhosts.conf

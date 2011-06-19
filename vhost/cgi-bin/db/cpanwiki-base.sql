@@ -460,6 +460,7 @@ CREATE TABLE `users` (
   `password` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `aboutme` blob,
+  `search` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -468,8 +469,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` VALUES (1,5,1,'','Master','barbie@cpantesters.org',NULL,'SECRET','http://wiki.cpantesters.org','Master Wiki Admin');
-INSERT INTO `users` VALUES (2,1,1,'','Guest','GUEST','public','c8d6ea7f8e6850e9ed3b642900ca27683a257201','','');
+INSERT INTO `users` VALUES (1,5,1,'','Master','barbie@cpantesters.org',NULL,'SECRET','http://wiki.cpantesters.org','Master Wiki Admin',0);
+INSERT INTO `users` VALUES (2,1,1,'','Guest','GUEST','public','c8d6ea7f8e6850e9ed3b642900ca27683a257201','','',0);
 
 --
 -- Table structure for table `wikiindex`

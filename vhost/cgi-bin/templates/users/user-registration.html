@@ -4,8 +4,8 @@
     crumb1_name = 'Registration' ;
 %]
 
-<script language="javascript" type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
-<script language="javascript" type="text/javascript">
+<script type="text/javascript" src="[% webpath %]/js/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
 tinyMCE.init({
     mode : "textareas",
     theme : "advanced",
@@ -51,7 +51,7 @@ tinyMCE.init({
 
 <div class="box">
     <table width="100%">
-    <tr><td width="90">Email *</td>
+    <tr><td width="100">Email *</td>
         <td width="10" class="alert">[% data.email_err %]</td>
         <td colspan="3"><input type="text" name="email" value="[% data.email %]" size="40" /><br />
             Your email address will NOT be publically visible or passed to any third party.
@@ -68,12 +68,12 @@ tinyMCE.init({
     </tr>
     <tr><td>About Me</td>
         <td class="alert">[% data.aboutme_err %]</td>
-        <td colspan="3"><textarea name="aboutme" rows="10" cols="45">[% data.aboutme %]</textarea></td>
+        <td colspan="3"><textarea name="aboutme" rows="10" cols="55">[% data.aboutme %]</textarea></td>
     </tr>
     <tr><td>Web Page</td>
         <td class="alert">[% data.url_err %]</td>
         <td colspan="3"><input type="text" name="url" value="[% data.url %]" size="50" /></td></tr>
-
+<!--
     <tr><td>Avatar</td>
         <td class="alert">[% data.image_err %]</td>
         <td colspan="3"><input type="file" name="image" />
@@ -83,6 +83,7 @@ tinyMCE.init({
             Any illegal or inappropriate images will be removed, and may result in the removal of your
             account and any further access to the wiki.  </td>
     </tr>
+-->
     <tr><td></td>
         <td></td>
         <td><input type="submit" name="submit" value="REGISTER" /></td>

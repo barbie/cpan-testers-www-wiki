@@ -53,6 +53,21 @@
 
 [% IF item.password != '-banned-' %]
 <div class="users">
+  <div class="userpic">
+    [% IF item.gravatar %]
+      <img src="[% item.gravatar %]" alt="[% item.realname %]" width="80" height="80" />
+    [% END %]
+
+    <!--
+    [% IF item.link %]
+      <img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]" align="right" 
+      [% IF item.width  %]width="[% item.width %]"[% END %]
+      [% IF item.height %]height="[% item.height %]"[% END %]
+      />
+    [% END %]
+    -->
+  </div>
+
   <div class="userbits">
     [% IF user.access == 5 %]
     <div class="username"><a href="[% cgipath %]/pages.cgi?act=user-adminedit&amp;userid=[% item.userid %]">[% item.realname %]</a></div>
@@ -61,9 +76,8 @@
     [% END %]
   </div>
   <div class="userinfo">
-    [% IF item.link %]<img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]" align="right" />[% END %]
     [% IF item.aboutme ; item.aboutme ; END %]
-    [% IF item.url %]<p><b>My Web Page:</b> <a href="[% item.url %]">[% item.url %]</a></p>[% END %]
+    [% IF item.url %]<p><strong>My Web Page:</strong> <a href="[% item.url %]">[% item.url %]</a></p>[% END %]
     [% IF ! item.aboutme AND ! item.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>
@@ -72,7 +86,7 @@
 [% END %]
 
 [% IF searched %]
-[% IF ! users %]<p align="center">Sorry, no-one matches that search.[% END %]
+[% IF ! users %]<p align="center">Sorry, no-one matches that search.</p>[% END %]
 [% ELSE %]
-<p align="center">Please select a search criteria from the options above.
+<p align="center">Please select a search criteria from the options above.</p>
 [% END %]
