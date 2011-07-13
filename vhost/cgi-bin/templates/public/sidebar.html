@@ -3,11 +3,14 @@
 <form name="search" id="search" method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="wiki-search" />
 [% IF wikihash.key %]
-<input type="text" name="data" size="16" value="[% wikihash.key %]" />
+<input type="text" id="data" name="data" size="16" value="[% wikihash.key %]" />
 [% ELSE %]
-<input type="text" name="data" size="16" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';"/>
+<input type="text" id="data" name="data" size="16" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';" />
 [% END %]
-<br /><input type="checkbox" name="allversions" [% IF wikihash.checked %]checked="checked"[% END %]/> All versions
+<label for="data" class="accessibility">Search</label>
+<br />
+<input type="checkbox" id="allversions" name="allversions" [% IF wikihash.checked %]checked="checked"[% END %] /> 
+<label for="allversions">All versions</label>
 <input class="button" type="submit" name="Submit" value="GO" />
 </form>
 

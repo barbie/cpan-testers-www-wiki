@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN::Testers::WWW::Wiki
-version:             1.02
+version:             1.03
 abstract:            The CPAN Testers Wiki website
 author:
   - Barbie <barbie@cpan.org>
@@ -10,7 +10,7 @@ distribution_type:   module
 installdirs:         site
 
 requires:
-  Labyrinth:                        5.07
+  Labyrinth:                        5.09
   Labyrinth::Plugin::Core:          5.07
   Labyrinth::Plugin::Wiki:          1.02
   Labyrinth::DIUtils::ImageMagick:  5.04
@@ -26,7 +26,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Wiki:
     file:     lib/CPAN/Testers/WWW/Wiki.pm
-    version:  1.02
+    version:  1.03
 
 no_index:
   directory:

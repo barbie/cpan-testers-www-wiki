@@ -47,6 +47,7 @@ vhost/cgi-bin/templates/public/layout.html
 vhost/cgi-bin/templates/public/popup.html
 vhost/cgi-bin/templates/public/rssfeed.xml
 vhost/cgi-bin/templates/public/sidebar.html
+vhost/cgi-bin/templates/public/social-bar.html
 vhost/cgi-bin/templates/users/user-acl.html
 vhost/cgi-bin/templates/users/user-adminedit.html
 vhost/cgi-bin/templates/users/user-adminlist.html

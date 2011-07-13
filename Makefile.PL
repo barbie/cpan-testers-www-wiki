@@ -3,8 +3,8 @@ WriteMakefile(
     NAME                => 'CPAN::Testers::WWW::Wiki',
     VERSION_FROM        => 'lib/CPAN/Testers/WWW/Wiki.pm',
     PREREQ_PM           => {
-        'Labyrinth'                         => '5.07',
-        'Labyrinth::Plugin::Core'           => '5.06',
+        'Labyrinth'                         => '5.09',
+        'Labyrinth::Plugin::Core'           => '5.07',
         'Labyrinth::Plugin::Wiki'           => '1.02',
         'Labyrinth::DIUtils::ImageMagick'   => '5.04',
     },
