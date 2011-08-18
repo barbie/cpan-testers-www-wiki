@@ -1,6 +1,6 @@
 {
     "name": "CPAN-Testers-WWW-Wiki",
-    "version": "1.03",
+    "version": "1.04",
     "abstract": "The CPAN Testers Wiki website",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -45,7 +45,7 @@
     "provides": {
         "CPAN::Testers::WWW::Wiki": {
             "file": "lib/CPAN/Testers/WWW/Wiki.pm",
-            "version": "1.03"
+            "version": "1.04"
         }
     },
     "no_index": {
