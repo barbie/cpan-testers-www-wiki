@@ -1,5 +1,14 @@
 Changes for the CPAN Testers Wiki website
 
+1.05    current
+        - upgrade to Labyrinth 5.12.
+        - upgrade to Labyrinth-Plugin-Core 5.10.
+        - removed social media bar due to dubious practices.
+        - added CPAN Testers Sponsors.
+        - added minimum perl version (5.006).
+        - fixed test pre-requisites.
+        - reworked Makefile.PL for clarity.
+
 1.04    18/08/2011
 	- revised banner logo image by Jon 'JJ' Allen.
 

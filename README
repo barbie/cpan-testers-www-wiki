@@ -1,7 +1,3 @@
-CPAN::Testers::WWW::WiUser)Contributed Perl DocumenCPAN::Testers::WWW::Wiki(3)
-
-
-
 NAME
        CPAN::Testers::WWW::Wiki - The CPAN Testers Wiki website.
 
@@ -40,12 +36,8 @@ AUTHOR
        <http://www.missbarbell.co.uk/>
 
 COPYRIGHT & LICENSE
-         Copyright (C) 2008-2011 Barbie for Miss Barbell Productions
+         Copyright (C) 2008-2012 Barbie for Miss Barbell Productions
          All Rights Reserved.
 
          This module is free software; you can redistribute it and/or
          modify it under the Artistic License 2.0.
-
-
-
-perl v5.10.1                      2011-03-31       CPAN::Testers::WWW::Wiki(3)

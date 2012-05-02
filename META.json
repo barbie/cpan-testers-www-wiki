@@ -1,6 +1,6 @@
 {
     "name": "CPAN-Testers-WWW-Wiki",
-    "version": "1.04",
+    "version": "1.05",
     "abstract": "The CPAN Testers Wiki website",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -23,19 +23,21 @@
     "prereqs" : {
         "runtime" : {
             "requires" : {
-                "Labyrinth": "5.09",
-                "Labyrinth::Plugin::Core": "5.07",
+                "perl": "5.006",
+                "Labyrinth": "5.12",
+                "Labyrinth::Plugin::Core": "5.10",
                 "Labyrinth::Plugin::Wiki": "1.02",
                 "Labyrinth::DIUtils::ImageMagick": "5.04"
             }
         },
         "test" : {
             "requires": {
+                "IO::File": "0",
                 "Test::More": "0.70"
             },
             "recommends": {
-                "Test::CPAN::Meta": "0.13",
-                "Test::CPAN::Meta::JSON": "0.10",
+                "Test::CPAN::Meta": "0",
+                "Test::CPAN::Meta::JSON": "0",
                 "Test::Pod": "1.00",
                 "Test::Pod::Coverage": "0.08"
             }
@@ -45,7 +47,7 @@
     "provides": {
         "CPAN::Testers::WWW::Wiki": {
             "file": "lib/CPAN/Testers/WWW/Wiki.pm",
-            "version": "1.04"
+            "version": "1.05"
         }
     },
     "no_index": {
