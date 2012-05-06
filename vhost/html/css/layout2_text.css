@@ -282,6 +282,8 @@ a.tooltip:hover span {
 }
 #tooltip p  { margin-top: 2px; margin-bottom: 2px; }
 
+#iheart a img { border: 0 }
+
 .alert { color: #f00; }
 
 .accessibility  { display: none }
