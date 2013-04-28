@@ -1,5 +1,6 @@
 Changes for the CPAN Testers Wiki website
 
+1.06    2013-04-28
         - change file dates changed to meet W3CDTF standards.
         - upgrade to Labyrinth 5.16.
         - adjusted seach box on side panel.

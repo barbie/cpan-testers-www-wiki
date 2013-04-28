@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN::Testers::WWW::Wiki
-version:             1.05
+version:             1.06
 abstract:            The CPAN Testers Wiki website
 author:
   - Barbie <barbie@cpan.org>
@@ -11,7 +11,7 @@ installdirs:         site
 
 requires:
   perl:                             5.006
-  Labyrinth:                        5.12
+  Labyrinth:                        5.16
   Labyrinth::Plugin::Core:          5.10
   Labyrinth::Plugin::Wiki:          1.02
   Labyrinth::DIUtils::ImageMagick:  5.04
@@ -28,7 +28,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Wiki:
     file:     lib/CPAN/Testers/WWW/Wiki.pm
-    version:  1.05
+    version:  1.06
 
 no_index:
   directory:
@@ -37,6 +37,9 @@ no_index:
     - vhost
 
 resources:
+  license:    http://www.perlfoundation.org/artistic_license_2_0
+  homepage:   http://wiki.cpantesters.org
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Testers-WWW-Wiki
   repository: http://github.com/barbie/cpan-testers-www-wiki
 
 meta-spec:
