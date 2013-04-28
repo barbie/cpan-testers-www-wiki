@@ -3,9 +3,9 @@
 <form name="search" id="search" method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="wiki-search" />
 [% IF wikihash.key %]
-<input type="text" id="data" name="data" size="16" value="[% wikihash.key %]" />
+<input type="text" id="data" name="data" size="12" value="[% wikihash.key %]" />
 [% ELSE %]
-<input type="text" id="data" name="data" size="16" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';" />
+<input type="text" id="data" name="data" size="12" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';" />
 [% END %]
 <label for="data" class="accessibility">Search</label>
 <br />
