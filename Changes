@@ -1,6 +1,7 @@
 Changes for the CPAN Testers Wiki website
 
         - updated templates.
+        - upgrade to Labyrinth-Plugin-Core 5.11.
 
 1.06    2013-04-28
         - change file dates changed to meet W3CDTF standards.
