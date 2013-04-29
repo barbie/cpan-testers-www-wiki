@@ -5,11 +5,11 @@
 [% IF wikihash.key %]
 <input type="text" id="data" name="data" size="12" value="[% wikihash.key %]" />
 [% ELSE %]
-<input type="text" id="data" name="data" size="12" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';" />
+<input type="text" id="data" name="data" size="12" value="Search For..." onfocus="if (this.value=='Search For...') this.value='';" />
 [% END %]
 <label for="data" class="accessibility">Search</label>
 <br />
-<input type="checkbox" id="allversions" name="allversions" [% IF wikihash.checked %]checked="checked"[% END %] /> 
+<input type="checkbox" id="allversions" name="allversions" [% IF wikihash.checked %]checked="checked"[% END %] />
 <label for="allversions">All versions</label>
 <input class="button" type="submit" name="Submit" value="GO" />
 </form>
@@ -24,10 +24,10 @@
     [% IF wikihash.pagename %]
       [% IF !wikihash.showmode %]
         <li><a href="/wiki/[% wikihash.pagename %]">Show</a></li>
-      [% END %]           
+      [% END %]
       [% IF !wikihash.editmode %]
         <li><a href="/wiki/edit/[% wikihash.pagename %]" rel="nofollow">Edit</a></li>
-      [% END %]           
+      [% END %]
       [% IF !wikihash.histmode %]
         <li><a href="/wiki/hist/[% wikihash.pagename %]" rel="nofollow">History</a></li>
       [% END %]
@@ -85,7 +85,7 @@
 
 <div class="adverts">
 <h1>Perl Promotions</h1>
-<script type="text/javascript" src="http://adserver.szabgab.com/ads/direct_link_selflink.js?cnt=5&noself=1"></script>
+<script type="text/javascript" src="http://adserver.szabgab.com/ads/direct_link_selflink.js?cnt=5&amp;noself=1"></script>
 <p align="center">Ads provide by<br /> <a href="http://adserver.szabgab.com">The Perl Community AdServer</a></p>
 </div>
 

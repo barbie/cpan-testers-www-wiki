@@ -1,4 +1,4 @@
-[% 
+[%
     title = 'Recent Changes';
 
     crumb1_name = 'Recent Changes' ;
@@ -8,7 +8,7 @@
 [% FOREACH item = wikihash.recent %]
 <li><a href="/wiki/[% item.pagename %]&amp;version=[% item.version %]">[% item.pagename %]</a>
     (version [% item.version %])
-    [% item.postdate %] ([% item.realname %])[% IF item.comment %] => "[% item.comment %]"[% END %]
+    [% item.postdate %] ([% item.realname %])[% IF item.comment %] => "[% item.comment %]"[% END %]</li>
 [% END %]
 </ul>
 
@@ -45,5 +45,5 @@ Last
 <option value="500" [% IF wikihash.entries == 500 %]selected="selected"[% END %]>500</option>
 </select>
 Changes
-<noscript><input type="submit" value="Submit"></noscript>
+<noscript><input type="submit" value="Submit" /></noscript>
 </form>

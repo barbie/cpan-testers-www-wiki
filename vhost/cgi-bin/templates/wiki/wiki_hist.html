@@ -1,4 +1,4 @@
-[% 
+[%
     title = wikihash.pagename _ ' (History)';
 
     crumb2_name = wikihash.pagename ;
@@ -21,11 +21,12 @@
     <input type="radio" name="diff2"  value="[% item.version %]" [% IF first %]checked="checked"[% ELSE %]style="visibility:hidden"[% END %] onclick="diffcheck()" />
     [% item.postdate %] ([% item.realname %])[% IF item.comment %] => "[% item.comment %]"[% END %] (version [% item.version %])
     [% IF first %][% IF user.access == 5 %]<input type="submit" onclick="setRollback()" value="ROLLBACK" />[% END %][% END %]
+</li>
 [% first = 0 %]
 [% END %]
 </ul>
 
-    <input type="submit" value='Compare Versions' />
+<input type="submit" value='Compare Versions' />
 
 </form>
 

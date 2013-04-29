@@ -1,7 +1,7 @@
 <h1>Differences between version [% wikihash.diff2.version %] and version [% wikihash.diff1.version %] of '[% wikihash.pagename %]'</h1>
 
 [% IF errmess %]
-<p class="alert">Error: [% errmess %]
+<p class="alert">Error: [% errmess %]</p>
 [% ELSE %]
 [% IF wikihash.diff0 %]
 <table width="100%">
@@ -15,7 +15,8 @@
     <td class="diff0"><code>[% hunk.left %]</code></td>
 </tr>
 [% END %]
-</table><hr />
+</table>
+<hr />
 [% ELSE %]
 <h3>Contents are identical</h3>
 [% END %]
