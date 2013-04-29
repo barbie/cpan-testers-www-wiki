@@ -2,11 +2,13 @@ Changes for the CPAN Testers Wiki website
 
         - updated templates.
         - upgrade to Labyrinth-Plugin-Core 5.11.
+        - minified CSS.
+        - sponsors list now built from JSON.
 
 1.06    2013-04-28
         - change file dates changed to meet W3CDTF standards.
         - upgrade to Labyrinth 5.16.
-        - adjusted seach box on side panel.
+        - adjusted search box on side panel.
         - added sumhits.pl for hits table cleaning.
 
 1.05    2012-05-06

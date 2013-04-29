@@ -282,9 +282,11 @@ a.tooltip:hover span {
 }
 #tooltip p  { margin-top: 2px; margin-bottom: 2px; }
 
-#iheart a img { border: 0 }
-
 .alert { color: #f00; }
 
 .accessibility  { display: none }
 .update20110712 { display: none }
+
+#iheart a img,
+#iheart a:hover img,
+#iheart a:visited img { border:0 }

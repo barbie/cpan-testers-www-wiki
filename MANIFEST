@@ -69,8 +69,11 @@ vhost/cgi-bin/templates/wiki/wiki_recent.html
 vhost/cgi-bin/templates/wiki/wiki_saved.html
 vhost/cgi-bin/templates/wiki/wiki_search.html
 vhost/dumper.sh
-vhost/html/css/layout2_setup.css
-vhost/html/css/layout2_text.css
+vhost/html/css/layout-min.css
+vhost/html/css/layout2-setup.css
+vhost/html/css/layout2-setup-min.css
+vhost/html/css/layout2-text.css
+vhost/html/css/layout2-text-min.css
 vhost/html/favicon.ico
 vhost/html/images/adverts/circle_power_perl.gif
 vhost/html/images/adverts/tt.gif
@@ -106,6 +109,7 @@ vhost/html/images/layout/smoke-100.jpg
 vhost/html/images/layout/smoke-150.jpg
 vhost/html/images/layout/yellow.png
 vhost/html/js/admin.js
+vhost/html/js/iheart.js
 vhost/html/js/tiny_mce/langs/en.js
 vhost/html/js/tiny_mce/license.txt
 vhost/html/js/tiny_mce/plugins/advhr/css/advhr.css

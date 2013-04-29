@@ -7,34 +7,34 @@
 
   <title>[% iname | html %]</title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Language" content="en-gb" />
-    <meta name="Generator"          content="Labyrinth" />
-    <meta name="keywords"           content="perl,cpan,testing,testers" />
-    <meta name="description"        content="CPAN Testers Wiki for information about automated testing of CPAN Perl distributions" />
-    <meta name="copyright"          content="Copyright (C) 2007-2012 CPAN Testers" />
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <meta http-equiv="Content-Language" content="en-gb" />
+  <meta name="Generator"          content="Labyrinth" />
+  <meta name="keywords"           content="perl,cpan,testing,testers" />
+  <meta name="description"        content="CPAN Testers Wiki for information about automated testing of CPAN Perl distributions" />
+  <meta name="copyright"          content="Copyright (C) 2007-2012 CPAN Testers" />
 
 [% IF redirect %]
 
-    <meta http-equiv="refresh" content="0;url=[% redirect %]">
+  <meta http-equiv="refresh" content="0;url=[% redirect %]">
 
 </head>
 <body>
 <p>saving...</p>
 
 [% ELSE %]
-    <link rel="alternate"  type="application/atom+xml" title="Atom"    href="http://wiki.cpantesters.org/rss/atom-1.0.xml" />
-    <link rel="alternate"  type="application/rss+xml"  title="RSS 2.0" href="http://wiki.cpantesters.org/rss/rss-2.0.xml" />
+  <link rel="alternate"  type="application/atom+xml" title="Atom"    href="http://wiki.cpantesters.org/rss/atom-1.0.xml" />
+  <link rel="alternate"  type="application/rss+xml"  title="RSS 2.0" href="http://wiki.cpantesters.org/rss/rss-2.0.xml" />
 
-    <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout2_setup.css" />
-    <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout2_text.css" />
+  <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout-min.css" />
 
-    [% INCLUDE "public/analytics.html" %]
+  [% INCLUDE "public/analytics.html" %]
 
-    <script type="text/javascript" src="[% webpath %]/js/wiki.js"></script>
-    [% IF user.access > 4 %]
-    <script type="text/javascript" src="[% webpath %]/js/admin.js"></script>
-    [% END %]
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="[% webpath %]/js/wiki.js"></script>
+  [% IF user.access > 4 %]
+  <script type="text/javascript" src="[% webpath %]/js/admin.js"></script>
+  [% END %]
 
 <!--
     Site Layout, Design &amp; Development by Miss Barbell Productions
@@ -137,6 +137,8 @@
   </div>
 
   <p class="footnote"><a href="/wiki/Terms">Terms &amp; Conditions</a></p>
+
+  <script type="text/javascript" src="/js/iheart.js"></script>
 
 [% END %]
 
