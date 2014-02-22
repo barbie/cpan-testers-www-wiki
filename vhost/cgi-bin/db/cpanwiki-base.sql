@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.41, for debian-linux-gnu (i486)
+-- MySQL dump 10.13  Distrib 5.5.34, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: cpanwiki
 -- ------------------------------------------------------
--- Server version	5.1.41-3ubuntu12.10
+-- Server version	5.5.34-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -77,18 +77,19 @@ DROP TABLE IF EXISTS `folders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `folders` (
   `folderid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `foldername` varchar(255) DEFAULT NULL,
-  `ref` varchar(255) DEFAULT NULL,
+  `path` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent` int(10) DEFAULT NULL,
-  PRIMARY KEY (`folderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `accessid` int(10) NOT NULL DEFAULT '5',
+  PRIMARY KEY (`folderid`),
+  KEY `IXPATH` (`path`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `folders`
 --
 
-INSERT INTO `folders` VALUES (1,'public','1',0);
+INSERT INTO `folders` VALUES (1,'public',0,1);
 
 --
 -- Table structure for table `groups`
@@ -291,18 +292,22 @@ CREATE TABLE `menus` (
   `menuid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `typeid` int(10) unsigned DEFAULT '1',
   `realmid` int(10) unsigned NOT NULL DEFAULT '0',
+  `name` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
+  `parentid` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`menuid`),
   KEY `IXTYPE` (`typeid`),
-  KEY `IXREALM` (`realmid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  KEY `IXREALM` (`realmid`),
+  KEY `IXPARENT` (`parentid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `menus`
 --
 
-INSERT INTO `menus` VALUES (1,2,1,NULL);
+INSERT INTO `menus` VALUES (1,1,1,'Public','Public Menu',0);
+INSERT INTO `menus` VALUES (2,1,2,'Admin','Admin Menu',0);
 
 --
 -- Table structure for table `optimages`
@@ -318,11 +323,6 @@ CREATE TABLE `optimages` (
   PRIMARY KEY (`optionid`,`typeid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `optimages`
---
-
 
 --
 -- Table structure for table `options`
@@ -341,11 +341,6 @@ CREATE TABLE `options` (
   KEY `IXMENU` (`menuid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `options`
---
-
 
 --
 -- Table structure for table `realms`
@@ -416,11 +411,6 @@ CREATE TABLE `sessions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sessions`
---
-
-
---
 -- Table structure for table `updates`
 --
 
@@ -436,11 +426,6 @@ CREATE TABLE `updates` (
   PRIMARY KEY (`upid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `updates`
---
-
 
 --
 -- Table structure for table `users`
@@ -460,7 +445,7 @@ CREATE TABLE `users` (
   `password` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `aboutme` blob,
-  `search` int(1) NOT NULL DEFAULT '1',
+  `search` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -535,4 +520,4 @@ INSERT INTO `wikipage` VALUES ('SandBox',1,0,1,1179853525,'','Test of cpan link:
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-03-31  8:20:48
+-- Dump completed on 2014-02-22  9:27:36
