@@ -1,5 +1,6 @@
 Changes for the CPAN Testers Wiki website
 
+1.07    2014-02-23
         - updated templates.
         - minified CSS.
         - sponsors list now built from JSON.
