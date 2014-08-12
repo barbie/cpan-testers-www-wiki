@@ -1,4 +1,7 @@
 Changes for the CPAN Testers Wiki website
+=========================================
+
+        - fixed distribution name in metadata.
 
 1.07    2014-02-23
         - updated templates.
