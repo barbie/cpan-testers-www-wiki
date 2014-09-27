@@ -1,6 +1,8 @@
 Changes for the CPAN Testers Wiki website
 =========================================
 
+        - fixed license fields in META.json to be lists.
+
 1.08    2014-08-16
         - fixed distribution name in metadata.
 
