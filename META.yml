@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN-Testers-WWW-Wiki
-version:             1.11
+version:             1.12
 abstract:            The CPAN Testers Wiki website
 author:
   - Barbie <barbie@cpan.org>
@@ -28,7 +28,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Wiki:
     file:     lib/CPAN/Testers/WWW/Wiki.pm
-    version:  1.11
+    version:  1.12
 
 no_index:
   directory:
