@@ -50,15 +50,26 @@ my @areas = $dbi->GetQuery('hash','GetHitAreas');
 for my $rs (@areas) {
     my $area = $rs->{area};
     my @rows = $dbi->GetQuery('hash','SumHits',$datetime,$area);
+    my $that = scalar(@rows);
+    my $this = 0;
+
     for my $row (@rows) {
+        $this++;
+
         # no processing needed?
         next    if($row->{number} == 1 && $row->{createdate} == 0);
 
         $dbi->DoQuery('StartTrans');
         my $rows = $dbi->DoQuery('DelAHit',$datetime,$row->{area},$row->{pageid},$row->{photoid},$row->{query});
+
+        # reset bogus query strings
+        $row->{query} = 'pagename=HomePage&name=bogus' if(    $row->{query} =~ /pagename=HomePage/
+                                                          and $row->{query} ne 'pagename=HomePage'
+                                                          and $row->{query} ne 'pagename=HomePage&name=bogus');
+
         $dbi->DoQuery('AddAHit',$row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query},0);
         $dbi->DoQuery('CommitTrans');
-        printf "[%6d] %6d,%15s,%3d,%3d,%s\n", $rows, $row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query};
+        printf "%d/%d [%6d] %6d,%15s,%3d,%3d,%s\n", $this, $that, $rows, $row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query};
     }
 }
 
