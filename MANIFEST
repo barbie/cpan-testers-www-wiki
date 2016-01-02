@@ -40,6 +40,7 @@ vhost/cgi-bin/templates/public/badlayout.html
 vhost/cgi-bin/templates/public/badmail.html
 vhost/cgi-bin/templates/public/badpage.html
 vhost/cgi-bin/templates/public/baduser.html
+vhost/cgi-bin/templates/public/banner.html
 vhost/cgi-bin/templates/public/banuser.html
 vhost/cgi-bin/templates/public/box-sites.html
 vhost/cgi-bin/templates/public/error_message.html

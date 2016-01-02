@@ -1,6 +1,8 @@
 Changes for the CPAN Testers Wiki website
 =========================================
 
+        - added missing template.
+
 1.11    2016-01-02
         - upgrade to Labyrinth-5.32.
         - upgrade to Labyrinth-Plugin-Core-5.19.
