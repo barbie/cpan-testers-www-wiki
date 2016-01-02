@@ -1,7 +1,7 @@
 Changes for the CPAN Testers Wiki website
 =========================================
 
-1.11    2015-09-15
+1.11    2016-01-02
         - upgrade to Labyrinth-5.32.
         - upgrade to Labyrinth-Plugin-Core-5.19.
         - added Labyrinth-Plugin-CPAN-3.55.
