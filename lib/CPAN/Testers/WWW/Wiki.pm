@@ -36,7 +36,7 @@ the site. TinyMCE is distributed under the GNU Lesser General Public License
 Version 2.1, and all files within the './vhost/html/js/tiny_mce' directory
 are copyright of the TinyMCE project.
 
-[1] http://tinymce.moxiecode.com/
+[1] https://www.tiny.cloud/
 
 =head1 SEE ALSO
 
